@@ -6,7 +6,7 @@ import { Character } from '../interfaces/character.interface';
   templateUrl: './main-page.component.html',
 })
 export class MainPageComponent {
-  characters: Character[] = [
+  public characters: Character[] = [
     {
       name: 'Krilin',
       power: 1000,
@@ -20,4 +20,9 @@ export class MainPageComponent {
       power: 8500,
     },
   ];
+
+  onNewCharacter(character: Character): void {
+    console.log(character);
+    this.characters = [...this.characters, character];
+  }
 }
