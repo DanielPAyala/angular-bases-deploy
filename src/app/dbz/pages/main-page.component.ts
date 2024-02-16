@@ -25,4 +25,9 @@ export class MainPageComponent {
     console.log(character);
     this.characters = [...this.characters, character];
   }
+
+  onDeleteCharacter(id: number) {
+    console.log(id);
+    this.characters.splice(id, 1);
+  }
 }
