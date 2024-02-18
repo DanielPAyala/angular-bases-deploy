@@ -11,9 +11,9 @@ export class ListComponent {
   characterList: Character[] = [];
 
   @Output()
-  onDeleteId: EventEmitter<number> = new EventEmitter();
+  onDeleteId: EventEmitter<string> = new EventEmitter();
 
-  onDeleteCharacter(indice: number): void {
+  onDeleteCharacter(indice: string): void {
     this.onDeleteId.emit(indice);
   }
 }
